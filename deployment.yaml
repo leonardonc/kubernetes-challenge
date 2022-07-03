@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: leo
+  name: leo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: leo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: leo
+    spec:
+      containers:
+      - image: leonardo:33
+        imagePullPolicy: IfNotPresent
+        name: leo
+        resources: {}
+        env:
+        - name: NAME
+          valueFrom:
+            configMapKeyRef:
+              name: config
+              key: name
+
+status: {}

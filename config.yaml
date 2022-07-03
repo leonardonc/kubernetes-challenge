@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  name: Leonardo
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: config
