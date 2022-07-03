@@ -23,3 +23,4 @@ Você pode expor o Docker do minikube com o comando:
 ```shell
 $ eval $(minikube docker-env)
 ```
+# kubernetes-challenge
